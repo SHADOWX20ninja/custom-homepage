@@ -1,0 +1,189 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Smooth Page Load Animation */
+body {
+    background: linear-gradient(to bottom, #ffffff, #88c7f7);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+    position: relative;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    width: 50%;
+    max-width: 600px;
+    z-index: 10;
+}
+
+/* Search Bar */
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 12px;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Ensures visibility */
+}
+
+/* Search Input */
+.search-box input {
+    border: none;
+    outline: none;
+    width: 80%;
+    padding: 12px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    color: black; /* Ensures text is visible */
+    background: transparent;
+}
+
+/* Expands & Glows on Focus */
+.search-box input:focus {
+    width: 85%;
+    box-shadow: 0 0 12px rgba(0, 0, 255, 0.5);
+}
+
+/* Search Icons */
+.search-box button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s ease-in-out, transform 0.2s;
+    color: black; /* Ensures icons are visible */
+}
+
+.search-box button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+/* Quick Links */
+.quick-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* App Buttons */
+.quick-links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Google Button */
+.quick-links .google {
+    background-color: #4285F4; /* Google Blue */
+}
+
+/* YouTube Button */
+.quick-links .youtube {
+    background-color: #FF0000; /* YouTube Red */
+}
+
+/* ChatGPT Button */
+.quick-links .chatgpt {
+    background-color: #00B9D3; /* ChatGPT Cyan */
+}
+
+/* Gmail Button */
+.quick-links .gmail {
+    background-color: #D44638; /* Gmail Red */
+}
+
+/* GitHub Button */
+.quick-links .github {
+    background-color: #24292F; /* GitHub Dark */
+}
+
+/* Hover Effect for App Buttons */
+.quick-links a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* App Icons */
+.quick-links a i {
+    font-size: 22px;
+    color: white;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* Theme Selector Popup */
+#theme-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    text-align: center;
+    z-index: 100;
+}
+
+/* Color Options */
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
