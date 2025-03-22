@@ -181,6 +181,28 @@ body {
     cursor: pointer;
     border: 2px solid white;
 }
+/* Video Theme Box */
+.video-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    font-size: 20px;
+}
+
+.video-theme i {
+    color: white;
+}
+/* Add Shortcut Button */
+.add-shortcut {
+    background-color: #808080; /* Gray color like Edge */
+    cursor: pointer;
+}
+
+.add-shortcut:hover {
+    background-color: #696969; /* Darker gray */
+}
 
 /* Fade-in Animation */
 @keyframes fadeIn {
